@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
+class ModelUser extends CI_Model
 {
     public function simpanData($data = null)
     {
@@ -28,3 +29,4 @@ defined('BASEPATH') or exit('No direct script access allowed');
         $this->db->limit(10, 0);
         return $this->db->get();
     }
+}
