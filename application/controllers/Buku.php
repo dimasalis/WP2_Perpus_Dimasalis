@@ -158,11 +158,11 @@ class Buku extends CI_Controller
                 'image' => $gambar
             ];
 
-            $this->ModelBuku->updateBuku($data, ['id' => $this->input->post('id')]);
+            $this->ModelBuku->updateBuku($data, ['id' => $this->input->post('id')]); 
             redirect('buku');
         }
     }
-
+    
     public function hapusBuku()
     {
         $where = ['id' => $this->uri->segment(3)];
@@ -216,7 +216,7 @@ class Buku extends CI_Controller
             $this->load->view('buku/ubah_kategori', $data);
             $this->load->view('templates/footer');
         } else {
-
+            
             $data = [
                 'kategori' => $this->input->post('kategori', true)
             ];
